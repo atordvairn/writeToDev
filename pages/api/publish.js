@@ -19,7 +19,7 @@ export default async function handler(req, res) {
     const body = {
       article: {
         title: req.body.title,
-        published: true,
+        published: req.body.publish || true,
         body_markdown: req.body.body,
         tags: req.body.tags,
       },
@@ -33,9 +33,14 @@ export default async function handler(req, res) {
         "api-key": req.body.api_key,
       },
     });
-    res.json({ message: req.body });
-    const data = await response.json();
 
+    const data = await response.json();
+    if (data.id) {
+      data.status = 200
+      res.json(data)
+    } else {
+      res.json({ status: data.status })
+    }
     console.log(data);
   } else {
     res.json({ message: "use post" })
