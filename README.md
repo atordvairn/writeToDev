@@ -2,6 +2,11 @@
 
 _only posts requests to the api will be processed_
 
+endpoint:
+```
+https://write-to-dev.vercel.app/api/publish
+```
+
 post a request as;
 ``` json
 {
