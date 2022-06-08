@@ -15,7 +15,7 @@ export default function Index() {
           {`{`}<br />
           <span class="m-3">"title": "test",</span><br />
           <span class="m-3">"body": "this is markdown for the body",</span><br />
-          <span class="m-3">"api_key": {`"<YOU API KEY FROM DEV.TO>"`},</span><br />
+          <span class="m-3">"api_key": <a href="https://dev.to/settings/account">{`"<YOU API KEY FROM DEV.TO>"`}</a>,</span><br />
           <span class="m-3">"tags": {`["webdev", "JavaScript", "test", "only4"]`}</span><br />
           {`}`}
         </code>
